@@ -46,7 +46,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <div className="flex items-center justify-between py-5 font-medium ">
+    <div className="flex items-center justify-between py-5   font-medium ">
       {/* for image */}
       <img src={assets.logo} alt="logo" className="w-36"></img>
 
@@ -60,7 +60,7 @@ const Navbar = () => {
                 onClick={() => {
                   setActiveIndex(i);
                 }}
-                className="flex items-center flex-col gap-1 relative"
+                className="flex items-center flex-col gap-1 relative uppercase"
               >
                 {val.title}
                 {activeIndex === i ? (
@@ -100,8 +100,8 @@ const Navbar = () => {
         <RxHamburgerMenu className="text-2xl cursor-pointer sm:hidden " onClick={()=>{setVisible(true)}} />
           {
             // here sm:hidden means ham burger content is hidden when screen is large
-            visible?<div className="absolute top-0 left-0 w-5/12 h-screen bg-gray-400 sm:hidden ">
-              <div className=" px-4 py-8 flex flex-col gap-5   ">
+            visible?<div className="absolute top-0 left-0 w-full h-screen sm:hidden  ">
+              <div className=" px-4 py-8 flex flex-col gap-5 w-7/12 h-screen bg-white  ">
                 <div className="flex items-center justify-between">
 
               <img src={assets.logo} alt="" className="w-24"/>
