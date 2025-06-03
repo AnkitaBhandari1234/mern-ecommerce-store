@@ -12,7 +12,7 @@ const LatestCollection = () => {
 
   // to load the 10 prodcuts from products from above products state
   useEffect(() => {
-    setLatestProducts(products.slice(0, 11));
+    setLatestProducts(products.slice(0, 10));
   }, []);
 
   return (
