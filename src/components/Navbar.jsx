@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { assets } from "../assets/assets";
 import { Link, useLocation } from "react-router-dom";
 import { GoSearch } from "react-icons/go";
@@ -6,10 +6,12 @@ import { IoPersonOutline } from "react-icons/io5";
 import { IoBagOutline } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
+import { ShopContext } from "../context/ShopContext";
 
 // useLocation means home page '/' this
 
 const Navbar = () => {
+const {showSearch,setshowSearch}=useContext(ShopContext);
   // for apperance of hr bar below the nav list item when clicked
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -77,7 +79,9 @@ const Navbar = () => {
 
       {/* right section */}
       <div className="flex items-center gap-6">
-        <GoSearch className="text-2xl cursor-pointer " />
+        
+        <GoSearch className="text-2xl cursor-pointer " onClick={()=>{setshowSearch(true)}} />
+        
 
         {/* profile */}
         <div className="group relative ">

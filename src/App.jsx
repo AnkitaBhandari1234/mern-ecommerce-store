@@ -12,11 +12,13 @@ import Orders from "./pages/Orders";
 import Cart from "./pages/Cart";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Search_Bar from "./components/Search_Bar";
 
 const App = () => {
   return (
     <div className="sm:px-[9vw] px-[3vw]">
       <Navbar/>
+      <Search_Bar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/collection" element={<Collection />} />
