@@ -24,7 +24,7 @@ const App = () => {
         <Route path="/collection" element={<Collection />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        {/* here we use productis so by using product id we can access the products */}
+        {/* here we use productid so by using product id we can access the products */}
         <Route path="/product/:productId" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />

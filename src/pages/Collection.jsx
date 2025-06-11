@@ -39,7 +39,7 @@ const Collection = () => {
   const applyFilter = () => {
 
     let productCopy = products.slice();
-     if (showSearch && typeof search === 'string' && search.trim() !== '') {
+     if (showSearch && typeof search === 'string' ) {
     const searchText = search.toLowerCase();
     productCopy = productCopy.filter(item =>
       String(item?.name ?? '').toLowerCase().includes(searchText)
