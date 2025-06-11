@@ -8,6 +8,12 @@ import { products } from '../assets/assets';
     const delivery_fee=10;
     const [search,setsearch]=useState([]);
     const[showSearch,setshowSearch]=useState(false);
+    const [cartItem,setcardItem]=useState({});
+
+    const addToCart=async(itemId,size)=>{
+        let cartData=structuredClone(cartItem);
+
+    }
 
     const value={
          products,currency,delivery_fee,
